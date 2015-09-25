@@ -21,7 +21,7 @@ $(document).ready(function(){
     }
     else {
      
-        $('.solution').append(i);
+        $('.solution').append('<p>' + i + '</p>');
     }
 
 }
