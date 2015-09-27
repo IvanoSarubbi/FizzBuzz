@@ -1,31 +1,33 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-     
-    for ( var i = 1; i < 21; i++){
 
-    if ((i % 3 === 0) && (i % 5 === 0)) {
 
-    $('.solution').append('<p>FizzBuzz</p>');
+    $('.button').click(function() {
 
-     }else{
-
-    if (i % 3 === 0) {
-
-       $('.solution').append('<p>Fizz</p>');
-
-    }
-    else if (i % 5 === 0) {
-
+        var fizzBuzz = function (number) {
         
-        $('.solution').append('<p>Buzz</p>');
-    }
-    else {
-     
-        $('.solution').append('<p>' + i + '</p>');
-    }
+        for (i = 1; i <= number; i++) {
+            if (i%15 === 0) {
+                $('.game').append("fizz buzz");
+            }
+            else if (i%3 === 0) {
+                $('.game').append("fizz");
+            }
+            else if (i%5 === 0) {
+                $('.game').append("buzz");
+            }
+            else {
+                $('.game').append('<p>' + i + '</p>');
+            }
+        };
+        };
 
-}
-    
-     
-}
+        if(+$('input').val()) {
+            fizzBuzz($('input').val());
+        }
+        else {
+            alert('Please enter a number');
+        }
+    $('input').val('');
+    }); 
 });
